@@ -154,7 +154,7 @@ kafka-topics --bootstrap-server node1.kafka:9092 --delete --topic dito-topic --c
 
 ```
 berikut untuk hasil dari create dan delete topic. perlu diketahui bahwa node1.kafka bisa diganti dengan node2.kafka atau broker lainnya, namun pada create dan delete ini kita hands on menggunakan node1.kafka
-![alt text](?raw=true)
+![alt text](https://github.com/ajiajinugroho/team2-incubation/blob/main/SSL-Deployment/IMG/1.%20Create-Delete%20Topic.png?raw=true)
 (link gambar)
 
 ### produce dan consume topic
@@ -170,7 +170,7 @@ kafka-console-producer --broker-list node1.kafka:9092 --topic ssl-topic --produc
 ```
 
 berikut hasil menjalankan command diatas untuk produce dan consume
-![alt text](?raw=true)
+![alt text](https://github.com/ajiajinugroho/team2-incubation/blob/main/SSL-Deployment/IMG/2.%20Produce-Consume%20SSL.png?raw=true)
 (link gambar)
 
 ### describe dan list topic
@@ -179,8 +179,7 @@ Pada tahap ini tim kami melakukan describe dan list topic menggunakan command be
 ```
 ./kafka-topics --bootstrap-server node1.kafka:9092 --describe --topic ssl-topic --command-config /etc/kafka/client-ssl.properties
 ```
-![alt text](?raw=true)
-(link gambar)
+
 
 
 * list
@@ -188,5 +187,5 @@ Pada tahap ini tim kami melakukan describe dan list topic menggunakan command be
 kafka-topics --bootstrap-server node1.kafka:9092 --list --command-config /etc/
 kafka/client-ssl.properties
 ```
-![alt text](?raw=true)
+![alt text](https://github.com/ajiajinugroho/team2-incubation/blob/main/SSL-Deployment/IMG/3.%20Describe-List%20Topic.png?raw=true)
 (link gambar)
