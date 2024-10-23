@@ -184,8 +184,7 @@ Pada tahap ini tim kami melakukan describe dan list topic menggunakan command be
 
 * list
 ```
-kafka-topics --bootstrap-server node1.kafka:9092 --list --command-config /etc/
-kafka/client-ssl.properties
+kafka-topics --bootstrap-server node1.kafka:9092 --list --command-config /etc/kafka/client-ssl.properties
 ```
 ![alt text](https://github.com/ajiajinugroho/team2-incubation/blob/main/SSL-Deployment/IMG/3.%20Describe-List%20Topic.png?raw=true)
 (link gambar)
