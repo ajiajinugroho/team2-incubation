@@ -166,7 +166,7 @@ kafka-console-producer --broker-list node1.kafka:9092 --topic ssl-topic --produc
 
 * consume
 ```
-./kafka-console-consumer --bootstrap-server node1.kafka:9092 --topic ssl-topic --from-beginning --consumer.config /etc/kafka/client-ssl.properties
+kafka-console-consumer --bootstrap-server node1.kafka:9092 --topic ssl-topic --from-beginning --consumer.config /etc/kafka/client-ssl.properties
 ```
 
 berikut hasil menjalankan command diatas untuk produce dan consume
@@ -177,7 +177,7 @@ berikut hasil menjalankan command diatas untuk produce dan consume
 Pada tahap ini tim kami melakukan describe dan list topic menggunakan command berikut:
 * describe
 ```
-./kafka-topics --bootstrap-server node1.kafka:9092 --describe --topic ssl-topic --command-config /etc/kafka/client-ssl.properties
+kafka-topics --bootstrap-server node1.kafka:9092 --describe --topic ssl-topic --command-config /etc/kafka/client-ssl.properties
 ```
 
 
