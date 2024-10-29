@@ -94,7 +94,7 @@ Konfigurasi SSL/TLS di `zk-client.properties`
 zookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSocketNetty
 zookeeper.ssl.client.enable=true
 zookeeper.ssl.protocol=TLSv1.2
-zookeeper.ssl.truststore.location=/var/ssl/private/zookeeper-client-cert/kafka.ZOOKEEPER-CLIENT.truststor>
+zookeeper.ssl.truststore.location=/var/ssl/private/zookeeper-client-cert/kafka.ZOOKEEPER-CLIENT.truststore.jks
 zookeeper.ssl.truststore.password=confluent
 zookeeper.ssl.keystore.location=/var/ssl/private/zookeeper-client-cert/kafka.ZOOKEEPER-CLIENT.keystore.jks
 zookeeper.ssl.keystore.password=confluent
