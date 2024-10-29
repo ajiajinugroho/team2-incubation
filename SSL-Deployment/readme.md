@@ -26,28 +26,28 @@
 Konfigurasi SSL/TLS di Kafka meliputi pengaturan `server.properties` untuk mendefinisikan ID broker, listener dengan protokol SSL, lokasi keystore dan truststore, serta pengaturan keamanan untuk komunikasi antar broker dan otorisasi klien, guna memastikan keamanan komunikasi.
 
 ```
-	broker.id=1
-	listeners=SSL://:9092
-	advertised.listeners=SSL://node2.kafka:9092
-	listener.security.protocol.map=SSL:SSL
-	log.dirs=/data/kafka
-	confluent.license.topic.replication.factor=1
-	zookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSocketNetty
-	zookeeper.ssl.client.enable=true
-	zookeeper.ssl.protocol=TLSv1.2
-	zookeeper.ssl.truststore.location=/var/ssl/private/broker1/kafka.broker1.truststore.jks
-	zookeeper.ssl.truststore.password=confluent
-	zookeeper.ssl.keystore.location=/var/ssl/private/broker1/kafka.broker1.keystore.jks
-	zookeeper.ssl.keystore.password=confluent
-	ssl.key.password=confluent
-	ssl.truststore.location=/var/ssl/private/broker1/kafka.broker1.truststore.jks
-	ssl.truststore.password=confluent
-	ssl.keystore.location=/var/ssl/private/broker1/kafka.broker1.keystore.jks
-	ssl.keystore.password=confluent
-	ssl.key.password=confluent
-	security.inter.broker.protocol=SSL
-	ssl.client.auth=required
-	ssl.protocol=TLSv1.2
+broker.id=1
+listeners=SSL://:9092
+advertised.listeners=SSL://node2.kafka:9092
+listener.security.protocol.map=SSL:SSL
+log.dirs=/data/kafka
+confluent.license.topic.replication.factor=1
+zookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSocketNetty
+zookeeper.ssl.client.enable=true
+zookeeper.ssl.protocol=TLSv1.2
+zookeeper.ssl.truststore.location=/var/ssl/private/broker1/kafka.broker1.truststore.jks
+zookeeper.ssl.truststore.password=confluent
+zookeeper.ssl.keystore.location=/var/ssl/private/broker1/kafka.broker1.keystore.jks
+zookeeper.ssl.keystore.password=confluent
+ssl.key.password=confluent
+ssl.truststore.location=/var/ssl/private/broker1/kafka.broker1.truststore.jks
+ssl.truststore.password=confluent
+ssl.keystore.location=/var/ssl/private/broker1/kafka.broker1.keystore.jks
+ssl.keystore.password=confluent
+ssl.key.password=confluent
+security.inter.broker.protocol=SSL
+ssl.client.auth=required
+ssl.protocol=TLSv1.2
 ```
 
 ### client-ssl.properties
