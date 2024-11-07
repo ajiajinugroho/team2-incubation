@@ -35,14 +35,14 @@ confluent.license.topic.replication.factor=1
 zookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSocketNetty
 zookeeper.ssl.client.enable=true
 zookeeper.ssl.protocol=TLSv1.2
-zookeeper.ssl.truststore.location=/var/ssl/private/broker1/kafka.broker1.truststore.jks
+zookeeper.ssl.truststore.location=/var/ssl/private/script/kafka.node2.zookeeper.truststore.jks
 zookeeper.ssl.truststore.password=confluent
-zookeeper.ssl.keystore.location=/var/ssl/private/broker1/kafka.broker1.keystore.jks
+zookeeper.ssl.keystore.location=/var/ssl/private/script/kafka.node2.zookeeper.keystore.jks
 zookeeper.ssl.keystore.password=confluent
 ssl.key.password=confluent
-ssl.truststore.location=/var/ssl/private/broker1/kafka.broker1.truststore.jks
+ssl.truststore.location=/var/ssl/private/script/kafka.node2.kafka.truststore.jks
 ssl.truststore.password=confluent
-ssl.keystore.location=/var/ssl/private/broker1/kafka.broker1.keystore.jks
+ssl.keystore.location=/var/ssl/private/script/kafka.node2.kafka.keystore.jks
 ssl.keystore.password=confluent
 ssl.key.password=confluent
 security.inter.broker.protocol=SSL
@@ -56,9 +56,9 @@ Konfigurasi SSL/TLS di `client-ssl.properties`
 ```
 bootstrap.servers=node1.kafka:9092,node2.kafka:9092,node3.kafka:9092,node4.kafka:9092
 security.protocol=SSL
-ssl.keystore.location=/var/ssl/private/broker1/kafka.broker1.keystore.jks
+ssl.keystore.location=/var/ssl/private/script/kafka.node2.kafka.keystore.jks
 ssl.keystore.password=confluent
-ssl.truststore.location=/var/ssl/private/broker1/kafka.broker1.truststore.jks
+ssl.truststore.location=/var/ssl/private/script/kafka.node2.kafka.truststore.jks
 ssl.truststore.password=confluent
 ```
 
@@ -80,9 +80,9 @@ server.2=node2.zookeeper:2888:3888
 server.3=node4.zookeeper:2888:3888
 serverCnxnFactory=org.apache.zookeeper.server.NettyServerCnxnFactory
 ssl.clientAuth=none
-ssl.keyStore.location=/var/ssl/private/zookeeper-cert/kafka.ZOOKEEPER.keystore.jks
+ssl.keyStore.location=/var/ssl/private/script/kafka.node2.zookeeper.keystore.jks
 ssl.keyStore.password=confluent
-ssl.trustStore.location=/var/ssl/private/zookeeper-cert/kafka.ZOOKEEPER.truststore.jks
+ssl.trustStore.location=/var/ssl/private/script/kafka.node2.zookeeper.truststore.jks
 ssl.trustStore.password=confluent
 syncLimit=2
 ```
@@ -94,9 +94,9 @@ Konfigurasi SSL/TLS di `zk-client.properties`
 zookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSocketNetty
 zookeeper.ssl.client.enable=true
 zookeeper.ssl.protocol=TLSv1.2
-zookeeper.ssl.truststore.location=/var/ssl/private/zookeeper-client-cert/kafka.ZOOKEEPER-CLIENT.truststore.jks
+zookeeper.ssl.truststore.location=/var/ssl/private/script/kafka.node2.zookeeper.truststore.jks
 zookeeper.ssl.truststore.password=confluent
-zookeeper.ssl.keystore.location=/var/ssl/private/zookeeper-client-cert/kafka.ZOOKEEPER-CLIENT.keystore.jks
+zookeeper.ssl.keystore.location=/var/ssl/private/script/kafka.node2.zookeeper.keystore.jks
 zookeeper.ssl.keystore.password=confluent
 ssl.key.password=confluent
 ```
@@ -107,10 +107,10 @@ Konfigurasi SSL/TLS di `consumer.properties`
 ```
 bootstrap.servers=node1.kafka:9092,node2.kafka:9092,node3.kafka:9092,node4.kafka:9092
 group.id=test-consumer-group
-ssl.keystore.location=/var/ssl/private/consumer-cert/kafka.consumer.keystore.jks
+ssl.keystore.location=/var/ssl/private/script/kafka.node2.kafka.keystore.jks
 ssl.keystore.password=confluent
 ssl.keystore.type=JKS
-ssl.truststore.location=/var/ssl/private/consumer-cert/kafka.consumer.truststore.jks
+ssl.truststore.location=/var/ssl/private/script/kafka.node2.kafka.truststore.jks
 ssl.truststore.password=confluent
 ssl.key.password=confluent
 ssl.truststore.type=JKS
@@ -121,10 +121,10 @@ security.protocol=SSL
 Konfigurasi SSL/TLS di `producer.properties`
 ```
 bootstrap.servers=node1.kafka:9092,node2.kafka:9092,node3.kafka:9092,node4.kafka:9092
-ssl.truststore.location=/var/ssl/private/producer-cert/kafka.producer.truststore.jks
+ssl.truststore.location=/var/ssl/private/script/kafka.node2.kafka.truststore.jks
 ssl.truststore.password=confluent
 ssl.keystore.type=JKS
-ssl.keystore.location=/var/ssl/private/producer-cert/kafka.producer.keystore.jks
+ssl.keystore.location=/var/ssl/private/script/kafka.node2.kafka.keystore.jks
 ssl.keystore.password=confluent
 ssl.key.password=confluent
 security.protocol=SSL
