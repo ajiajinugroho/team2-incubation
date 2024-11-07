@@ -259,3 +259,28 @@ authorizer.class.name=kafka.security.authorizer.AclAuthorizer
 kafka-console-producer --broker-list node1.kafka:9092 --topic ssl-topic --producer.config /etc/kafka/alice.properties
 kafka-console-consumer --bootstrap-server node1.kafka:9092 --topic ssl-topic --from-beginning --consumer.config /etc/kafka/client-bob.properties
 ```
+
+# KSQL
+
+### konfigurasi ksql-server.properties pada /etc/ksqldb
+
+```
+listeners=http://node2.ksql:8088
+advertised.listeners=https://node2.ksql:8088
+bootstrap.servers=node1.kafka:9092,node2.kafka:9092,node3.kafka:9092,node4.kafka:9092
+
+# Security settings for SSL
+ssl.keystore.location=/var/ssl/private/script/kafka.node2.kafka.keystore.jks
+ssl.keystore.password=confluent
+ssl.key.password=confluent
+ssl.truststore.location=/var/ssl/private/script/kafka.node2.kafka.truststore.jks
+ssl.truststore.password=confluent
+
+# Enable SASL/SCRAM authentication
+sasl.enabled.mechanisms=SCRAM-SHA-256
+security.protocol=SASL_SSL
+
+# SASL settings
+sasl.mechanism=SCRAM-SHA-256
+sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username="admins" password="admins";
+```
